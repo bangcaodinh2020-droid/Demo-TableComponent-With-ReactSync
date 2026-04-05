@@ -86,11 +86,11 @@ http://localhost:4173
 src/
 │
 ├── components/        # Reusable UI components
-│   ├── Table/
-│   ├── TableRow/
-│   └── TableCell/
+│   ├── auths/
+│   ├── dashboard/
+│   └── mockData.tsx
 │
-├── pages/             # Custom paging
+├── pages/             # Custom pages
 │
 ├── layouts/          # Custom layout
 │
@@ -119,12 +119,12 @@ import BaseComponent, {ButtonComponent,
 } from "@bangcao2020/reactsync";
 
 
----
+
 
 ## 📊 Usage
 
 ### Example 1- View, delete a row.
-```
+
 
 <App id="appLayout" data={{ syncData:{
 mode:"production",
@@ -149,11 +149,11 @@ data={{fromTableName:"tableData",
 
           }}> My Table</TableComponent>
 
-```
+
 
 ### Example 2 - Customize table, pagination
 
-```
+
 
 <TableComponent id="testTable11"
 data={{tableName:"tableData",
@@ -170,10 +170,9 @@ data={{tableName:"tableData",
                     syncers:["testTable11"],
                     styles:{button:"page-link text-info"}}}></PaginationComponent>
 
-```
 
 ### Example 3 - Move data between tables
-```
+
 
 <TableComponent id="testTable11"
 data={{tableName:"tableData",
@@ -190,10 +189,9 @@ data={{tableName:"tableData",
                     syncers:["testTable11"],
                     styles:{button:"page-link text-info"}}}></PaginationComponent>
 
-```
 
 ### Example 4 - Edit row data
-```
+
 
 <EditRowComponent id="viewRow32"
 data={{
@@ -210,7 +208,7 @@ styles:{button:"bg-success rounded"},
           styles:styles,
           }}> My Table</TableComponent>
 
----
+```
 
 ## 🤝 Contributing
 
